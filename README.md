@@ -1,99 +1,37 @@
-# Shrowd — Dual-Identity Social App
+# Shrowd
 
-> **One account. Two distinct, unlinked worlds.**  
-> A mobile-first social platform collapsing curated public presence and authentic anonymity into a single seamless experience.
+> **Next-generation social connection built for the modern era.**
 
----
-
-## 🌌 What is Shrowd?
-
-**Shrowd** is a mobile-first social application (built with Flutter for iOS, Android, and Web) designed around one foundational concept: **every account has two separate, linked identities under a single login**, with a strict privacy firewall between them.
-
-### 1. 🌐 Public Identity
-- **Your Curated Social Profile**: Choose your own username, profile avatar, banner, and bio.
-- **Full Social Graph**: Publicly searchable, can follow and be followed openly.
-- **Direct Messaging**: Full access to 24-hour ephemeral Direct Messages with other Public profiles.
-- **Social Actions**: Post, comment, and like with public attribution.
-
-### 2. 🎭 Wanderer Identity
-- **Anonymous Persona**: Auto-generated handle upon signup (e.g. `Wanderer#102`).
-- **Locked Masked Avatar**: Custom bio and banner are editable, but avatar is permanently locked to a default masked icon.
-- **Zero Search Presence**: Structurally absent from search indexes — cannot be looked up by anyone.
-- **No Direct Messages**: Strictly disabled at both UI and server levels for privacy safety.
-- **Separate Social Graph**: Independent follower list; can follow Public profiles anonymously.
-
-### ⚡ Instant Global Identity Switch
-A top-navigation toggle is accessible across every screen in the app. Tapping it switches your active identity instantly:
-- **Zero screen reload.**
-- **Zero lost input** (e.g., text being typed in a comment field remains intact and is simply posted under the newly toggled identity).
+A mobile-first social platform introducing a fresh, privacy-conscious way to express yourself, discover communities, and interact in real time.
 
 ---
 
-## 🔒 The Core Privacy Rule
+## ⚡ Overview
 
-> **Public and Wanderer identities must NEVER be linkable anywhere in the UI, API responses, or data layer.**
+Shrowd reimagines how people navigate online presence by seamlessly combining public expression and private interactions in a single, fluid experience.
 
-- **Independent Graphs**: Follower/following networks are completely segregated.
-- **Polymorphic Authoring**: Posts, comments, and interactions reference polymorphic author profiles rather than a shared user account.
-- **Structural Anonymity**: Wanderer profiles are not indexed in search databases, preventing accidental data leaks.
+### Key Highlights
 
----
-
-## ✨ Features & What's Being Built
-
-### 📰 1. The Wire & Media Feed
-- Text, high-res photos, and carousel posts.
-- Seamless swipe into a vertical Reels-style video feed.
-- Mode-aware feeds tailored to active identity context.
-
-### 👻 2. Ghost Likes
-- Like counts are public, but the list of who liked a post is **completely hidden from everyone**, including the post's author.
-- Eliminates social anxiety and clout-chasing around likes.
-
-### ⏳ 3. 24-Hour Ephemeral DMs
-- Direct messaging between Public profiles.
-- All messages are **hard-deleted after 24 hours** from server storage, not just hidden by flags.
-- Completely blocked for Wanderer mode.
-
-### 🎙️ 4. Galaxy Hubs (Live Audio & Music Rooms)
-- **Public Hubs**: Casual drop-in audio lounges for up to 5 participants, auto-closing after 2 hours.
-- **Private Hubs**: Unlimited capacity, invite-only rooms accessible via one-time Public DM links.
-- Real-time voice channels powered by LiveKit.
-
-### 🏆 5. Quests & "Essence" Economy
-- Community challenges created by users with photo-proof submissions.
-- Quest creators verify submissions and reward participants with **"Essence"** (in-app currency).
-- Spend Essence in the cosmetic **Matrix Shop** or use it to unlock new Galaxy Hub sessions (0.5 Essence per Hub).
-
-### 🛡️ 6. Safety & Account Controls
-- Independent profile management for both Public and Wanderer identities.
-- Granular block and report mechanisms to maintain community health.
+- **Dual-Perspective Interaction** — Effortlessly switch contexts with a single tap, keeping your different social modes cleanly separated.
+- **Privacy-First Architecture** — Designed from the ground up to protect user privacy and eliminate social anxiety.
+- **Dynamic Content & Feeds** — Rich multimedia feeds, seamless vertical video, and interactive creator content.
+- **Real-Time Audio Hubs** — Drop into live voice spaces and hang out with communities in real time.
+- **Interactive Challenges** — Engage in community quests and explore exclusive in-app features.
 
 ---
 
-## 🎨 Visual Design System
+## 🛠️ Built With
 
-- **Dark-First Palette**: Near-black background (`#0F0E13`) with subtle glows and glassmorphism.
-- **Dual-Mode Dynamic Accents**:
-  - 🔵 **Public Mode**: Electric Indigo (`#5B6CFF`) — vibrant, open, and clear.
-  - 🟣 **Wanderer Mode**: Deep Violet / Magenta (`#8B2AC2`) — moody, shadowed, and covert.
-- **Floating Glassmorphic Navigation**: Frosted translucent floating pill nav bar with real-time blur backdrop.
+- **Client:** Flutter (Dart) — Cross-platform iOS, Android & Web
+- **Architecture:** Riverpod State Management
+- **Design System:** Sleek dark-first glassmorphic UI
 
 ---
 
-## 🛠️ Technology Stack
+## 🔒 Project Status
 
-| Layer | Technology |
-|---|---|
-| **Client** | Flutter (Dart), State Management with Riverpod |
-| **Backend** | Node.js (NestJS) |
-| **Database** | PostgreSQL |
-| **Cache / Ephemeral** | Valkey (BSD-licensed Redis fork) |
-| **Realtime** | Socket.IO (DMs, notifications) & LiveKit (Hub Voice) |
-| **Media** | Local file storage (Trial/Dev Phase) |
+Currently under private active development. Full feature specifications and release details will be unveiled upon public launch.
 
 ---
 
-## 🎯 The Final Outcome
-
-A high-performance, mobile-first social ecosystem where users seamlessly navigate between their public, curated presence and their private, anonymous self without juggling multiple apps or accounts — protected by mathematical and architectural separation at every layer.
+*© Shrowd. All rights reserved.*
